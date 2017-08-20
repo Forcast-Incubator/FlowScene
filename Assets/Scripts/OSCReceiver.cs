@@ -55,7 +55,7 @@ public class OSCReceiver : MonoBehaviour
             {
                 if (primitives.ContainsKey(key))
                 {
-                    primitives[key].transform.position = Vector3.Lerp(primitives[key].transform.position, positions[key], Time.deltaTime);
+                    primitives[key].transform.position = Vector3.Lerp(primitives[key].transform.position, positions[key], Time.deltaTime*8f);
 
                     primitives[key].transform.localScale = Vector3.zero; //Vector3.one * (2 - positions[key].w);
                     if(key == 0)
